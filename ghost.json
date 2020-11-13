@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Poltergeist",
+        "strength": "Can throw multiple objects at once",
+        "weakness": "Empty rooms prevent them from throwing objects.",
+        "evidence": [
+            "Spirit Box",
+            "Fingerprints",
+            "Ghost Orb"
+        ]
+    },
+    {
+        "name": "Banshee",
+        "strength": "Targets one player at a time.",
+        "weakness": "The Crucifix",
+        "evidence": [
+            "EMF Level 5",
+            "Fingerprints",
+            "Freezing Temperatures"
+        ]
+    },
+    {
+        "name": "Jinn",
+        "strength": "The further you are away, the faster a Jinn is.",
+        "weakness": "Turning off a location's power source will prevent it from moving fast.",
+        "evidence": [
+            "Spirit Box",
+            "Ghost Orb",
+            "EMF Level 5"
+        ]
+    },
+    {
+        "name": "Spirit",
+        "strength": "None",
+        "weakness": "Using smudge sticks to prevent attacks.",
+        "evidence": [
+            "Spirit Box",
+            "Fingerprints",
+            "Ghost Writing"
+        ]
+    },
+    {
+        "name": "Wraith",
+        "strength": "Footsteps cannot be traced.",
+        "weakness": "Reacts to salt.",
+        "evidence": [
+            "Fingerprints",
+            "Freezing Temperatures",
+            "Spirit Box"
+        ]
+    },
+    {
+        "name": "Phantom",
+        "strength": "Looking at a phantom will cause your sanity to drop.",
+        "weakness": "Taking its photo will cause it to disappear",
+        "evidence": [
+            "EMF Level 5",
+            "Ghost Orb",
+            "Freezing Temperatures"
+        ]
+    },
+    {
+        "name": "Mare",
+        "strength": "Increased attack frequency in the dark.",
+        "weakness": "Less likely to attack when many lights are on.",
+        "evidence": [
+            "Spirit Box",
+            "Ghost Orb",
+            "Freezing Temperatures"
+        ]
+    },
+    {
+        "name": "Revenant",
+        "strength": "Fast when hunting.",
+        "weakness": "Slow when you are hidden.",
+        "evidence": [
+            "EMF Level 5",
+            "Fingerprints",
+            "Ghost Writing"
+        ]
+    },
+    {
+        "name": "Shade",
+        "strength": "Shy, difficult to find.",
+        "weakness": "Will not hunt when players are in groups.",
+        "evidence": [
+            "EMF Level 5",
+            "Ghost Writing",
+            "Ghost Orb"
+        ]
+    },
+    {
+        "name": "Demon",
+        "strength": "Will attack aggressively.",
+        "weakness": "Asking a question on a ouija board won't lower a player's sanity.",
+        "evidence": [
+            "Spirit Box",
+            "Ghost Writing",
+            "Freezing Temperatures"
+        ]
+    },
+    {
+        "name": "Yurei",
+        "strength": "Affects player sanity more than normal.",
+        "weakness": "Using a smudge stick will prevent it from roaming.",
+        "evidence": [
+            "Spirit Box",
+            "Ghost Writing",
+            "Freezing Temperatures"
+        ]
+    },
+    {
+        "name": "Oni",
+        "strength": "Can move objects quickly",
+        "weakness": "More active when more players are nearby.",
+        "evidence": [
+            "EMF Level 5",
+            "Spirit Box",
+            "Ghost Writing"
+        ]
+    }
+]
