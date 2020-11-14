@@ -81,7 +81,6 @@ function ghostOrb() {
   document.getElementById("Wraith").style.display = "none";
   document.getElementById("Revenant").style.display = "none";
   document.getElementById("Demon").style.display = "none";
-  document.getElementById("Yurei").style.display = "none";
   document.getElementById("Oni").style.display = "none";
   document.getElementById("ghost-orb").style.backgroundColor = "#f8f8ff";
   document.getElementById("ghost-orb").style.color = "#000000";
