@@ -4,21 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <title>Phasmo-Finder</title>
   </head>
 
   <body>
     <h1 class="header">Phasmo-Finder</h1>
     <div class="evi-btn">
-      <button id="ghost-writing" onclick="ghostWriting()">Ghost Writing</button>
-      <button id="ghost-orb" onclick="ghostOrb()">Ghost Orb</button>
-      <button id="freezing-temps" onclick="freTemp()">Freezing Temperatures</button>
-      <button id="fingerprint" onclick="finPrnt()">Fingerprints</button>
-      <button id="emf-five" onclick="emfFive()">EMF Level 5</button>
-      <button id="spiritbox" onclick="spiritBox()">Spirit Box</button>
-      <br>
+      <button id="ghost-writing" onclick="ghostWriting()" ondblclick="ghostWritingReset()">Ghost Writing</button>
+      <button id="ghost-orb" onclick="ghostOrb()" ondblclick="ghostOrbReset()">Ghost Orb</button>
+      <button id="freezing-temps" onclick="freTemp()" ondblclick="freTempReset()">Freezing Temperatures</button>
+      <button id="fingerprint" onclick="finPrnt()" ondblclick="finPrntReset()">Fingerprints</button>
+      <button id="emf-five" onclick="emfFive()" ondblclick="emfFiveReset()">EMF Level 5</button>
+      <button id="spiritbox" onclick="spiritBox()" ondblclick="spiritBoxReset()">Spirit Box</button>
+      <br />
       <button onclick="resetSelection()">Reset Selection</button>
     </div>
     <br />
@@ -27,11 +30,19 @@
       <table id="ghost-table" class="ghost-table">
         <tr>
           <th>Ghost</th>
-          <th>Strength</th>
-          <th>Weakness</th>
           <th>Evidence #1</th>
           <th>Evidence #2</th>
           <th>Evidence #3</th>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <div class="container">
+      <table id="ghost-table-str-weak">
+        <tr>
+          <th>Ghost</th>
+          <th>Strength</th>
+          <th>Weakness</th>
         </tr>
       </table>
     </div>
