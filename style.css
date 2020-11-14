@@ -60,6 +60,28 @@ tr:nth-child(2n) {
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+input[type=text] {
+  width: 20em;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+  text-align: center;
+}
+
+.evi-objective {
+  text-align: left;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.Objective-List {
+  list-style-type: none;
+}
+
 @media only screen and (max-width: 600px) {
   .container {
     max-width: 100%;

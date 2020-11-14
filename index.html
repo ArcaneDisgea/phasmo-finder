@@ -15,6 +15,52 @@
   <body>
     <h1 class="header">Phasmo-Finder</h1>
     <div class="evi-btn">
+      <label for="ghost-name">Ghost Name</label><br>
+      <input id=ghost-name type="text" placeholder="Your ghost's name">
+      <div class="evi-objective">
+        <ul class="Objective-List">
+          <li id="Ghost-Event2">
+            <input type="checkbox" name="Ghost-Event" id="Ghost-Event">
+            <label for="Ghost-Event">Have a member of your team witness a <strong>Ghost Event.</strong></label>
+          </li>
+          <li id="Photo2">
+            <input type="checkbox" name="Photo" id="Photo">
+            <label for="Photo">Capture a <strong>photo</strong> of the Ghost.</label>
+          </li>
+          <li id="Dirty-Water2">
+            <input type="checkbox" name="Dirty-Water" id="Dirty-Water">
+            <label for="Dirty-Water">Capture a <strong>photo of dirty water</strong> in a sink.</label>
+          </li>
+          <li id="EMF2">
+            <input type="checkbox" name="EMF" id="EMF">
+            <label for="EMF">Find evidence of the paranormal with an <strong>EMF Reader.</strong></label>
+          </li>
+          <li id="Freezing-Temps2">
+            <input type="checkbox" name="Freezing-Temps" id="Freezing-Temps">
+            <label for="Freezing-Temps">Detect a room <strong>below 10C/50F</strong> with a thermometer.</label>
+          </li>
+          <li id="Motion2">
+            <input type="checkbox" name="Motion" id="Motion">
+            <label for="Motion">Detect a Ghosts presence with a <strong>motion sensor.</strong></label>
+          </li>
+          <li id="Smudge2">
+            <input type="checkbox" name="Smudge" id="Smudge">
+            <label for="Smudge">Cleanse the area near the Ghost using <strong>smudge sticks.</strong></label>
+          </li>
+          <li id="Crucifix2">
+            <input type="checkbox" name="Crucifix" id="Crucifix">
+            <label for="Freezing-Temps">Prevent the Ghost from hunting with a <strong>crucifix.</strong></label>
+          </li>
+          <li id="Salt2">
+            <input type="checkbox" name="Salt" id="Salt">
+            <label for="Salt">Get a Ghost to walk through <strong>salt.</strong></label>
+          </li>
+        </ul>
+      </div>
+      <button id="objective-btn" onclick="submitobj()" ondblclick="resetobj()">Submit Objectives</button>
+      <br>
+      <br>
+      <br>
       <button id="ghost-writing" onclick="ghostWriting()" ondblclick="ghostWritingReset()">Ghost Writing</button>
       <button id="ghost-orb" onclick="ghostOrb()" ondblclick="ghostOrbReset()">Ghost Orb</button>
       <button id="freezing-temps" onclick="freTemp()" ondblclick="freTempReset()">Freezing Temperatures</button>

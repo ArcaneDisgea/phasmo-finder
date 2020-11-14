@@ -18,7 +18,7 @@ fetch(url)
   .then(function (ghostsList) {
     return ghostsList.map(function (ghosts) {
       let trEvi = createNode("tr"),
-        trStrWeak = createNode("tr");
+        trStrWeak = createNode("tr"),
         tdName = createNode("td"),
         tdNameStrWeak = createNode("td"),
         tdStr = createNode("td"),
@@ -51,75 +51,83 @@ fetch(url)
   });
 
 function resetSelection() {
-  //evi
-  document.getElementById("Poltergeist").style.display = "";
-  document.getElementById("Banshee").style.display = "";
-  document.getElementById("Jinn").style.display = "";
-  document.getElementById("Wraith").style.display = "";
-  document.getElementById("Phantom").style.display = "";
-  document.getElementById("Mare").style.display = "";
-  document.getElementById("Spirit").style.display = "";
-  document.getElementById("Revenant").style.display = "";
-  document.getElementById("Shade").style.display = "";
-  document.getElementById("Demon").style.display = "";
-  document.getElementById("Yurei").style.display = "";
-  document.getElementById("Oni").style.display = "";
-  //str
-  document.getElementById("Poltergeist-str").style.display = "";
-  document.getElementById("Banshee-str").style.display = "";
-  document.getElementById("Jinn-str").style.display = "";
-  document.getElementById("Wraith-str").style.display = "";
-  document.getElementById("Phantom-str").style.display = "";
-  document.getElementById("Mare-str").style.display = "";
-  document.getElementById("Spirit-str").style.display = "";
-  document.getElementById("Revenant-str").style.display = "";
-  document.getElementById("Shade-str").style.display = "";
-  document.getElementById("Demon-str").style.display = "";
-  document.getElementById("Yurei-str").style.display = "";
-  document.getElementById("Oni-str").style.display = "";
-  //buttons
-  document.getElementById("ghost-writing").style.backgroundColor = "";
-  document.getElementById("ghost-writing").style.color = "";
-  document.getElementById("ghost-orb").style.backgroundColor = "";
-  document.getElementById("ghost-orb").style.color = "";
-  document.getElementById("freezing-temps").style.backgroundColor = "";
-  document.getElementById("freezing-temps").style.color = "";
-  document.getElementById("fingerprint").style.backgroundColor = "";
-  document.getElementById("fingerprint").style.color = "";
-  document.getElementById("emf-five").style.backgroundColor = "";
-  document.getElementById("emf-five").style.color = "";
-  document.getElementById("spiritbox").style.backgroundColor = "";
-  document.getElementById("spiritbox").style.color = "";
-  //reset table colors
-  var ghostWrit = document.getElementsByClassName("Ghost Writing")
-  for (const element of ghostWrit) {
-    element.style.backgroundColor = ""
-    element.style.color = "";
-  }
-  var ghostOrbs = document.getElementsByClassName("Ghost Orb")
-  for (const element of ghostOrbs) {
-    element.style.backgroundColor = ""
-    element.style.color = "";
-  }
-  var freezey = document.getElementsByClassName("Freezing Temperatures")
-  for (const element of freezey) {
-    element.style.backgroundColor = ""
-    element.style.color = "";
-  }
-  var fingeys = document.getElementsByClassName("Fingerprints")
-  for (const element of fingeys) {
-    element.style.backgroundColor = ""
-    element.style.color = "";
-  }
-  var emfive = document.getElementsByClassName("EMF Level 5")
-  for (const element of emfive) {
-    element.style.backgroundColor = ""
-    element.style.color = "";
-  }
-  var sprite = document.getElementsByClassName("Spirit Box")
-  for (const element of sprite) {
-    element.style.backgroundColor = ""
-    element.style.color = "";
+  const resetConfirm = confirm(
+    "This will reset all progress on the entire page."
+  );
+  if (resetConfirm == true) {
+    document.getElementById("ghost-name").value = "";
+    //evi
+    document.getElementById("Poltergeist").style.display = "";
+    document.getElementById("Banshee").style.display = "";
+    document.getElementById("Jinn").style.display = "";
+    document.getElementById("Wraith").style.display = "";
+    document.getElementById("Phantom").style.display = "";
+    document.getElementById("Mare").style.display = "";
+    document.getElementById("Spirit").style.display = "";
+    document.getElementById("Revenant").style.display = "";
+    document.getElementById("Shade").style.display = "";
+    document.getElementById("Demon").style.display = "";
+    document.getElementById("Yurei").style.display = "";
+    document.getElementById("Oni").style.display = "";
+    //str
+    document.getElementById("Poltergeist-str").style.display = "";
+    document.getElementById("Banshee-str").style.display = "";
+    document.getElementById("Jinn-str").style.display = "";
+    document.getElementById("Wraith-str").style.display = "";
+    document.getElementById("Phantom-str").style.display = "";
+    document.getElementById("Mare-str").style.display = "";
+    document.getElementById("Spirit-str").style.display = "";
+    document.getElementById("Revenant-str").style.display = "";
+    document.getElementById("Shade-str").style.display = "";
+    document.getElementById("Demon-str").style.display = "";
+    document.getElementById("Yurei-str").style.display = "";
+    document.getElementById("Oni-str").style.display = "";
+    //buttons
+    document.getElementById("ghost-writing").style.backgroundColor = "";
+    document.getElementById("ghost-writing").style.color = "";
+    document.getElementById("ghost-orb").style.backgroundColor = "";
+    document.getElementById("ghost-orb").style.color = "";
+    document.getElementById("freezing-temps").style.backgroundColor = "";
+    document.getElementById("freezing-temps").style.color = "";
+    document.getElementById("fingerprint").style.backgroundColor = "";
+    document.getElementById("fingerprint").style.color = "";
+    document.getElementById("emf-five").style.backgroundColor = "";
+    document.getElementById("emf-five").style.color = "";
+    document.getElementById("spiritbox").style.backgroundColor = "";
+    document.getElementById("spiritbox").style.color = "";
+    //reset table colors
+    var ghostWrit = document.getElementsByClassName("Ghost Writing");
+    for (const element of ghostWrit) {
+      element.style.backgroundColor = "";
+      element.style.color = "";
+    }
+    var ghostOrbs = document.getElementsByClassName("Ghost Orb");
+    for (const element of ghostOrbs) {
+      element.style.backgroundColor = "";
+      element.style.color = "";
+    }
+    var freezey = document.getElementsByClassName("Freezing Temperatures");
+    for (const element of freezey) {
+      element.style.backgroundColor = "";
+      element.style.color = "";
+    }
+    var fingeys = document.getElementsByClassName("Fingerprints");
+    for (const element of fingeys) {
+      element.style.backgroundColor = "";
+      element.style.color = "";
+    }
+    var emfive = document.getElementsByClassName("EMF Level 5");
+    for (const element of emfive) {
+      element.style.backgroundColor = "";
+      element.style.color = "";
+    }
+    var sprite = document.getElementsByClassName("Spirit Box");
+    for (const element of sprite) {
+      element.style.backgroundColor = "";
+      element.style.color = "";
+    }
+  } else {
+    console.log("Nothing cleared!");
   }
 }
 
@@ -141,9 +149,9 @@ function ghostWriting() {
   //buttons
   document.getElementById("ghost-writing").style.backgroundColor = "#f8f8ff";
   document.getElementById("ghost-writing").style.color = "#000000";
-  var ghostWrit = document.getElementsByClassName("Ghost Writing")
+  var ghostWrit = document.getElementsByClassName("Ghost Writing");
   for (const element of ghostWrit) {
-    element.style.backgroundColor = "#DFF2BF"
+    element.style.backgroundColor = "#DFF2BF";
     element.style.color = "#000000";
   }
 }
@@ -166,9 +174,9 @@ function ghostWritingReset() {
   //buttons
   document.getElementById("ghost-writing").style.backgroundColor = "";
   document.getElementById("ghost-writing").style.color = "";
-  var ghostWrit = document.getElementsByClassName("Ghost Writing")
+  var ghostWrit = document.getElementsByClassName("Ghost Writing");
   for (const element of ghostWrit) {
-    element.style.backgroundColor = ""
+    element.style.backgroundColor = "";
     element.style.color = "";
   }
 }
@@ -191,9 +199,9 @@ function ghostOrb() {
   //buttons
   document.getElementById("ghost-orb").style.backgroundColor = "#f8f8ff";
   document.getElementById("ghost-orb").style.color = "#000000";
-  var ghostOrbs = document.getElementsByClassName("Ghost Orb")
+  var ghostOrbs = document.getElementsByClassName("Ghost Orb");
   for (const element of ghostOrbs) {
-    element.style.backgroundColor = "#DFF2BF"
+    element.style.backgroundColor = "#DFF2BF";
     element.style.color = "#000000";
   }
 }
@@ -215,10 +223,10 @@ function ghostOrbReset() {
   document.getElementById("Oni-str").style.display = "";
   //buttons
   document.getElementById("ghost-orb").style.backgroundColor = "";
-  document.getElementById("ghost-orb").style.color = ""
-  var ghostOrbs = document.getElementsByClassName("Ghost Orb")
+  document.getElementById("ghost-orb").style.color = "";
+  var ghostOrbs = document.getElementsByClassName("Ghost Orb");
   for (const element of ghostOrbs) {
-    element.style.backgroundColor = ""
+    element.style.backgroundColor = "";
     element.style.color = "";
   }
 }
@@ -241,9 +249,9 @@ function freTemp() {
   //buttons
   document.getElementById("freezing-temps").style.backgroundColor = "#f8f8ff";
   document.getElementById("freezing-temps").style.color = "#000000";
-  var freezey = document.getElementsByClassName("Freezing Temperatures")
+  var freezey = document.getElementsByClassName("Freezing Temperatures");
   for (const element of freezey) {
-    element.style.backgroundColor = "#DFF2BF"
+    element.style.backgroundColor = "#DFF2BF";
     element.style.color = "#000000";
   }
 }
@@ -266,9 +274,9 @@ function freTempReset() {
   //buttons
   document.getElementById("freezing-temps").style.backgroundColor = "";
   document.getElementById("freezing-temps").style.color = "";
-  var freezey = document.getElementsByClassName("Freezing Temperatures")
+  var freezey = document.getElementsByClassName("Freezing Temperatures");
   for (const element of freezey) {
-    element.style.backgroundColor = ""
+    element.style.backgroundColor = "";
     element.style.color = "";
   }
 }
@@ -293,9 +301,9 @@ function finPrnt() {
   //buttons
   document.getElementById("fingerprint").style.backgroundColor = "#f8f8ff";
   document.getElementById("fingerprint").style.color = "#000000";
-  var fingeys = document.getElementsByClassName("Fingerprints")
+  var fingeys = document.getElementsByClassName("Fingerprints");
   for (const element of fingeys) {
-    element.style.backgroundColor = "#DFF2BF"
+    element.style.backgroundColor = "#DFF2BF";
     element.style.color = "#000000";
   }
 }
@@ -320,9 +328,9 @@ function finPrntReset() {
   //buttons
   document.getElementById("fingerprint").style.backgroundColor = "";
   document.getElementById("fingerprint").style.color = "";
-  var fingeys = document.getElementsByClassName("Fingerprints")
+  var fingeys = document.getElementsByClassName("Fingerprints");
   for (const element of fingeys) {
-    element.style.backgroundColor = ""
+    element.style.backgroundColor = "";
     element.style.color = "";
   }
 }
@@ -345,9 +353,9 @@ function emfFive() {
   //buttons
   document.getElementById("emf-five").style.backgroundColor = "#f8f8ff";
   document.getElementById("emf-five").style.color = "#000000";
-  var emfive = document.getElementsByClassName("EMF Level 5")
+  var emfive = document.getElementsByClassName("EMF Level 5");
   for (const element of emfive) {
-    element.style.backgroundColor = "#DFF2BF"
+    element.style.backgroundColor = "#DFF2BF";
     element.style.color = "#000000";
   }
 }
@@ -370,9 +378,9 @@ function emfFiveReset() {
   //buttons
   document.getElementById("emf-five").style.backgroundColor = "";
   document.getElementById("emf-five").style.color = "";
-  var emfive = document.getElementsByClassName("EMF Level 5")
+  var emfive = document.getElementsByClassName("EMF Level 5");
   for (const element of emfive) {
-    element.style.backgroundColor = ""
+    element.style.backgroundColor = "";
     element.style.color = "";
   }
 }
@@ -391,9 +399,9 @@ function spiritBox() {
   //buttons
   document.getElementById("spiritbox").style.backgroundColor = "#f8f8ff";
   document.getElementById("spiritbox").style.color = "#000000";
-  var sprite = document.getElementsByClassName("Spirit Box")
+  var sprite = document.getElementsByClassName("Spirit Box");
   for (const element of sprite) {
-    element.style.backgroundColor = "#DFF2BF"
+    element.style.backgroundColor = "#DFF2BF";
     element.style.color = "#000000";
   }
 }
@@ -412,9 +420,25 @@ function spiritBoxReset() {
   //buttons
   document.getElementById("spiritbox").style.backgroundColor = "";
   document.getElementById("spiritbox").style.color = "";
-  var sprite = document.getElementsByClassName("Spirit Box")
+  var sprite = document.getElementsByClassName("Spirit Box");
   for (const element of sprite) {
-    element.style.backgroundColor = ""
+    element.style.backgroundColor = "";
     element.style.color = "";
+  }
+}
+
+function submitobj() {
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]:not(:checked)');
+  for (var checkbox of checkboxes) {
+    document.getElementById(checkbox.id + '2').style.display = "none"
+    // console.log(checkbox.id + '2')
+  }
+}
+
+function resetobj() {
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]:not(:checked)');
+  for (var checkbox of checkboxes) {
+    document.getElementById(checkbox.id + '2').style.display = ""
+    // console.log(checkbox.id + '2')
   }
 }
