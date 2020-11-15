@@ -112,7 +112,7 @@ input[type=text] {
   }
 
   .obj-btn {
-    grid-area: submit;
+    grid-area: submit !important;
   }
 
   .evi-btn {
