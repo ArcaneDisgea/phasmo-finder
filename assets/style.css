@@ -1,0 +1,139 @@
+:root {
+  --main-bg-color: #282828;
+  --card-bg-color: #303030;
+  --main-font-color: #f8f8ff;
+  --success-color: #4e975a;
+  --error-color: #c73737;
+  --card-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  --font: "Montserrat", sans-serif;
+}
+
+html {
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  padding: 1em;
+}
+
+table:nth-child(2n) {
+  background-color: wheat;
+}
+
+tr:nth-child(2n) {
+  background-color: var(--main-bg-color);
+}
+
+input[type=text] {
+  padding: 0.5em;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+}
+
+.ghost-name-container {
+  text-align: center;
+}
+
+.evi-btn {
+  text-align: center;
+}
+
+.obj-btn {
+  background-color: var(--success-color) !important;
+  color: var(--main-font-color) !important;
+  margin: auto !important;
+  width: 50%;
+  transform: translateX(50%);
+}
+
+.obj-btn:hover {
+  background-color:#377541 !important;
+}
+
+.evi-btn button,
+.obj-btn {
+  background-color: var(--card-bg-color);
+  color: var(--main-font-color);
+  border: none;
+  border-radius: 5px;
+  box-shadow: var(--card-shadow);
+  padding: 1em;
+  margin: 5px;
+}
+
+.evi-btn button:hover {
+  background-color: var(--main-bg-color)
+}
+
+.reset-btn {
+  background-color: var(--error-color) !important;
+  color: var(--main-font-color);
+}
+
+.container {
+  background-color: var(--card-bg-color);
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+@media only screen and (min-width: 900px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header header header header"
+      ". . name . ."
+      ". obj obj submit ."
+      "evi-btn evi-btn evi-btn evi-btn evi-btn"
+      ". evi evi evi ."
+      ". str-weak str-weak str-weak .";
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .ghost-name-container {
+    grid-area: name;
+  }
+
+  .evi-objective {
+    grid-area: obj;
+  }
+
+  .obj-btn {
+    grid-area: submit;
+  }
+
+  .evi-btn {
+    grid-area: evi-btn;
+  }
+
+  .ghost-evi-container {
+    grid-area: evi;
+    margin: 1em;
+  }
+
+  .ghost-str-container {
+    grid-area: str-weak;
+    margin: 1em;
+  }
+
+  .ghost-table {
+    width: 100%;
+  }
+
+  .ghost-table-str-weak {
+    width: 100%;
+  }
+}
