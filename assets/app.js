@@ -1,4 +1,4 @@
-const url = "./ghost.json";
+const url = "./assets/ghost.json";
 const ghostTable = document.getElementById("ghost-table");
 const ghostStrWeak = document.getElementById("ghost-table-str-weak");
 
@@ -51,9 +51,7 @@ fetch(url)
   });
 
 function resetSelection() {
-  const resetConfirm = confirm(
-    "This will reset all progress on the entire page."
-  );
+  const resetConfirm = confirm("This will reset all progress on the entire page. Are you sure?");
   if (resetConfirm == true) {
     document.getElementById("ghost-name").value = "";
     //evi
@@ -126,6 +124,12 @@ function resetSelection() {
       element.style.backgroundColor = "";
       element.style.color = "";
     }
+    //Reset obj
+    var obj = document.querySelectorAll("li");
+    for (var objectives of obj) {
+      objectives.style.display = "";
+    }
+    console.log(document.querySelectorAll("li"));
   } else {
     console.log("Nothing cleared!");
   }
@@ -391,11 +395,13 @@ function spiritBox() {
   document.getElementById("Phantom").style.display = "none";
   document.getElementById("Revenant").style.display = "none";
   document.getElementById("Shade").style.display = "none";
+  document.getElementById("Yurei").style.display = "none";
   //str
   document.getElementById("Banshee-str").style.display = "none";
   document.getElementById("Phantom-str").style.display = "none";
   document.getElementById("Revenant-str").style.display = "none";
   document.getElementById("Shade-str").style.display = "none";
+  document.getElementById("Yurei-str").style.display = "none";
   //buttons
   document.getElementById("spiritbox").style.backgroundColor = "#f8f8ff";
   document.getElementById("spiritbox").style.color = "#000000";
@@ -430,7 +436,7 @@ function spiritBoxReset() {
 function submitobj() {
   var checkboxes = document.querySelectorAll('input[type="checkbox"]:not(:checked)');
   for (var checkbox of checkboxes) {
-    document.getElementById(checkbox.id + '2').style.display = "none"
+    document.getElementById(checkbox.id + "2").style.display = "none";
     // console.log(checkbox.id + '2')
   }
 }
@@ -438,7 +444,7 @@ function submitobj() {
 function resetobj() {
   var checkboxes = document.querySelectorAll('input[type="checkbox"]:not(:checked)');
   for (var checkbox of checkboxes) {
-    document.getElementById(checkbox.id + '2').style.display = ""
+    document.getElementById(checkbox.id + "2").style.display = "";
     // console.log(checkbox.id + '2')
   }
 }
