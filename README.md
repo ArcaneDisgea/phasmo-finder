@@ -7,6 +7,6 @@ Simple Phasmophobia Evidence Tracker
 
 ## To Do
 
-[ ] Mobile Styling
+ - [x] Mobile Styling
 
-[ ] Break Strengths/Weaknesses out to a second table as it is not really necessary for identifying a ghost but is still useful to know what your remaining options have.
+ - [x] Break Strengths/Weaknesses out to a second table as it is not really necessary for identifying a ghost but is still useful to know what your remaining options have.
